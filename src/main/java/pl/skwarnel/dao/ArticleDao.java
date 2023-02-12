@@ -5,7 +5,9 @@ import pl.skwarnel.entities.Article;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Repository
 @Transactional
@@ -24,6 +26,12 @@ public class ArticleDao {
 
     public void delete(Article article) {
         em.remove(em.contains(article) ? article : em.merge(article));
+    }
+
+    public List<Article> findAllArticles() {
+        TypedQuery<Article> query = em.createQuery("SELECT a FROM Article a", Article.class);
+        List<Article> results = query.getResultList();
+        return results;
     }
 
 }

@@ -16,9 +16,10 @@
             <property name="hibernate.dialect"
                       value="org.hibernate.dialect.MySQL8Dialect" />
             <property name="hibernate.connection.characterEncoding" value="utf8" />
-            <property name="javax.persistence.schema-generation.database.action"
-                      value="drop-and-create"/>
-            <property name="spring.sql.init.mode" value="always"/>
+            <property name="hibernate.enable_lazy_load_no_trans" value="true" />
+<!--            <property name="javax.persistence.schema-generation.database.action"-->
+<!--                      value="none"/>-->
+<!--            <property name="spring.sql.init.mode" value="always"/>-->
         </properties>
     </persistence-unit>
 </persistence>

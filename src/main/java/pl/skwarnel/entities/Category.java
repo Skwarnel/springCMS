@@ -1,11 +1,9 @@
 package pl.skwarnel.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity(name = "categories")
+@Entity
+@Table(name="categories")
 public class Category {
 
     public Category(String name, String description) {
@@ -21,5 +19,14 @@ public class Category {
 
     public Category() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

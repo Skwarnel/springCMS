@@ -2,26 +2,15 @@ package pl.skwarnel;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-//import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.LocaleContextResolver;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
-//import pl.coderslab.springhibernate.converter.AuthorConverter;
-//import pl.coderslab.springhibernate.converter.PublisherConverter;
 
 import java.util.Locale;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
-
-//    private final PublisherConverter publisherConverter;
-//    private final AuthorConverter authorConverter;
-
-//    public WebConfig(PublisherConverter publisherConverter, AuthorConverter authorConverter) {
-//        this.publisherConverter = publisherConverter;
-//        this.authorConverter = authorConverter;
-//    }
 
     @Bean
     public LocaleContextResolver localeResolver() {
